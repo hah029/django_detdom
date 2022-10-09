@@ -1,0 +1,35 @@
+{% extends "detdom/base.html" %}
+
+{% block title %}{{ header }}{% endblock %}
+
+{% block header_title %}{{ header }}{% endblock %}
+
+{% block content %}
+
+<section class="py-5 text-left container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <dl class="row">
+                <dt class="col-sm-3">Адрес:</dt>
+                <dd class="col-sm-9">188330, пос. Сиверский Гатчинского района Ленинградской области, ул. Красная, 18-19</dd>
+            
+                <dt class="col-sm-3">Телефон/Факс:</dt>
+                <dd class="col-sm-9"><a href="tel:8(813)71-44-221">8(813)71-44-221</a>, <a href="tel:8(813)71-44-397">8(813)71-44-397</a></dd>
+            
+                <dt class="col-sm-3">Электронная почта</dt>
+                <dd class="col-sm-9"><a href="mailto:sivdetdom@rambler.ru">sivdetdom@rambler.ru</a></dd>
+            </dl>
+        </div>
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <div style="position:relative;overflow:hidden;">
+                <a href="https://yandex.ru/maps/org/siverskiy_detskiy_dom/1032072603/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Сиверский детский дом</a>
+                <a href="https://yandex.ru/maps/10174/saint-petersburg-and-leningrad-oblast/category/orphanage/184106304/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">
+                    Детский дом в Санкт‑Петербурге и Ленинградской области
+                </a>
+                <iframe src="https://yandex.ru/map-widget/v1/-/CCUZ4ZGCHC" width="600" height="450" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

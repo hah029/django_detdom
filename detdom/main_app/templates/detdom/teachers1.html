@@ -1,0 +1,37 @@
+{% extends "detdom/base.html" %}
+
+{% block title %}{{ header }}{% endblock %}
+
+{% block header_title %}{{ header }}{% endblock %}
+
+{% block content %}
+<div class="row p-3 m-1">
+
+    <table class="table table-hover table-sm" style="font-size: 14px;">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Должность</th>
+            <th scope="col">ФИО</th>
+            <th scope="col">Год рождения</th>
+            <th scope="col">Опыт работы</th>
+            <th scope="col">Телефон</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for teacher in teachers %}
+            {% if teacher.group == 'Коррекционная педагогика' %}
+                <tr style="height: 80px; align-content: center;">
+                    <th scope="row" ><a data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">{{teacher.pk}}</a></th>
+                    <td>{{teacher.job_title}}</td>
+                    <td>{{teacher.last_name}} {{teacher.first_name}} {{teacher.alt_name}}</td>
+                    <td>{{teacher.birthday}}</td>
+                    <td>{{teacher.experience}}</td>
+                    <td>{{teacher.phone_number}}</td>
+                </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
